@@ -1,0 +1,16 @@
+<project name="MLI"  basedir="..">
+  <description>IIB Continuous Integration Demo (main script)</description>
+
+  <property file="D:/WORKSAPCE_01/BUILD/ant/build.properties" />
+	
+	<exec executable="C:\Program Files\IBM\IIB\10.0.0.14\server\bin\mqsiprofile.cmd">
+	</exec>
+    <exec executable="C:\Program Files\IBM\IIB\10.0.0.14\server\bin\mqsideployscript.bat">
+    	<!--arg value= "mqsideploy"/>-->
+      <arg value="${integrationnode}" />
+      <arg value="-e" />
+      <arg value="${integrationsvr}" />
+      <arg value="-a" />
+      <arg value="${bar.path}/${barfile}" />
+      </exec>
+</project>
